@@ -1,0 +1,200 @@
+:root {
+  --pink-100: #ffe6f0;
+  --pink-200: #ff99cc;
+  --pink-500: #ff3399;
+  --pink-600: #cc0066;
+  --pink-700: #99004d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: clamp(1rem, 3vw, 2rem);
+  font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://images.pexels.com/photos/196664/pexels-photo-196664.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+main {
+  background-color: white;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: min(100%, 42rem);
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  text-align: center;
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.brand {
+  color: var(--pink-600);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  color: var(--pink-600);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--pink-100);
+  color: var(--pink-700);
+}
+
+#instructions {
+  margin: 0 auto;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  background-color: var(--pink-200);
+  border-radius: 10px;
+  padding: clamp(0.9rem, 2vw, 1.25rem);
+  width: min(100%, 36rem);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.85rem, 5vw, 2.75rem);
+  margin: 0.25rem 0 0;
+  color: var(--pink-600);
+  text-shadow: 1px 1px #fff;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  color: var(--pink-700);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  margin-top: 0.25rem;
+  border: 2px solid var(--pink-200);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--pink-500);
+  box-shadow: 0 0 0 3px rgba(255, 51, 153, 0.16);
+}
+
+button#calculate {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 0.25rem;
+  background-color: var(--pink-500);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: min(100%, 14rem);
+}
+
+button#calculate:hover {
+  background-color: #e60073;
+  transform: translateY(-1px);
+}
+
+#result {
+  padding: clamp(0.9rem, 2vw, 1.25rem);
+  background-color: var(--pink-100);
+  border-radius: 12px;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--pink-600);
+  display: none;
+  animation: fadeIn 0.8s ease-in-out;
+  white-space: pre-line;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer {
+  font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--pink-700);
+  font-size: 0.95rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+
+  main {
+    padding: 2.5rem;
+  }
+
+  .form-group {
+    gap: 1.25rem;
+  }
+}

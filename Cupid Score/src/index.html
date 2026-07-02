@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cupid Score</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main id="main">
+    <header id="title">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="#main">Cupid Score</a>
+      </nav>
+      <h1>Cupid Score 🏹❤️</h1>
+    </header>
+
+    <section id="instructions">
+      <strong>How To Play:</strong> Type <em>your name</em> and your <em>lover's name</em> and the magic happen.
+    </section>
+
+    <section class="form-group" aria-label="Love calculator form">
+      <div class="field">
+        <label for="name1">Your Name:</label>
+        <input type="text" id="name1" placeholder="Enter Your Name" required>
+      </div>
+
+      <div class="field">
+        <label for="name2">Lover's Name:</label>
+        <input type="text" id="name2" placeholder="Enter Lover's Name" required>
+      </div>
+
+      <button id="calculate" type="button">Calculate Love</button>
+    </section>
+
+    <section id="result" aria-live="polite" style="display: none;"></section>
+
+    <footer>
+      Made with ❤️ by Kwadwo
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
